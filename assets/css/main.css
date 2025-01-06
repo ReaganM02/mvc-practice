@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Zinc Colors */
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-400: #a1a1aa;
+  --zinc-500: #71717a;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+
+  /* Tailwind Red Colors */
+  --red-50: #fef2f2;
+  --red-100: #fee2e2;
+  --red-200: #fecaca;
+  --red-300: #fca5a5;
+  --red-400: #f87171;
+  --red-500: #ef4444;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+  --red-800: #991b1b;
+  --red-900: #7f1d1d;
+  --red-950: #450a0a;
+
+  /* Tailwind Blue Colors */
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+  --blue-950: #172554;
+}
+
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont;
+  margin: 0;
+}
+
+.create-post-wrapper {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.create-post {
+  max-width: 40rem;
+  width: 100%;
+  box-shadow: 5px 8px 20px #00000024;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.form-input {
+  height: 2.5rem;
+}
+
+.form-input-style {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--zinc-300);
+  padding: 0.4rem;
+  font-size: 0.90rem;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont;
+}
+
+textarea {
+  min-height: 4rem;
+}
+
+.field-wrapper {
+  margin-top: 1rem;
+}
+
+.form-label {
+  font-size: 1rem;
+  color: var(--zinc-400);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.form-submit-btn {
+  display: block;
+  margin-top: 1rem;
+  background-color: var(--blue-600);
+  color: white;
+  border: 0;
+  min-width: 7rem;
+  min-height: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  border-radius: 20rem;
+  cursor: pointer;
+}
+
+.field-error label{
+  color: var(--red-400);
+}
+
+.field-error .form-input-style {
+  border: 1px solid var(--red-400);
+}
+
+.field-error .error-msg {
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  color: var(--red-600);
+}
