@@ -12,14 +12,17 @@ function abort($statusCode = Response::NOT_FOUND) {
   die();
 }
 
-/**
- * Use to load a view file
- * @param string $path - file path
- * @return void
- */
-function loadTemplate($path, $data=[]) {
+function loadFile($path) {
+  return require_once BASE_PATH . $path;
+}
+
+function loadView($viewPath, $data=[]) {
   extract($data);
-  require_once __DIR__ . $path;
+  return require_once BASE_PATH . '/views/' . $viewPath;
+}
+
+function loadModel($modelFile) {
+  return require_once BASE_PATH . '/models/' . $modelFile;
 }
 
 function fieldErrorClass($fieldName, $classes=[]) {
